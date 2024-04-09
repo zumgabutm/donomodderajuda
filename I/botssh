@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-#--------@Modderajuda-----------#
+#--------❚█══SCRIPT_DO_RS.CONNECT_PRO══█❚-----------#
 source ShellBot.sh
 touch lista
 [[ -z $1 ]] && {
@@ -15,7 +15,7 @@ ShellBot.username
 menu() {
     local msg
         msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        msg+="<b>🤖 SEJA BEM VINDO(A)! 🤖</b>\n"
+        msg+="<b>🤖 ❚█══SCRIPT_DO_RS.CONNECT_PRO══█❚ 🤖</b>\n"
         msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         msg+="<b>DICA: PARA GERAR LOGIN DE TESTE CLIQUE NO BOTÃO (GERAR TESTE GRATIS)</b>\n\nVOCÊ PODERÁ GERAR UM LOGIN A CADA 24HRS"
         msg+="\n\n=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
