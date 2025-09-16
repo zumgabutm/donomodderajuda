@@ -1,7 +1,11 @@
 #!/bin/bash
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "TCP Tweaker 1.0" ; tput sgr0
+clear
+echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[44;1;37m                      TCP TWEAKER                      \E[0m"
+echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 if [[ `grep -c "^#PH56" /etc/sysctl.conf` -eq 1 ]]
 then
+
 	echo ""
 	echo "As configurações de rede TCP Tweaker já foram adicionadas no sistema!"
 	echo ""
@@ -25,10 +29,10 @@ sysctl -p /etc/sysctl.conf > /dev/null
 		exit
 	fi
 else
+
 	echo ""
-	echo "Este é um script experimental. Use por sua conta e risco!"
-	echo "Este script irá alterar algumas configurações de rede"
-	echo "do sistema para reduzir a latência e melhorar a velocidade."
+	echo "ESTE SCRIPT IRÁ ALTERAR AS CONFIGURAÇÕES DE REDE DO"
+ echo "SISTEMA PARA REDUZIR A LATÊNCIA E MELHORAR A VELOCIDADE"
 	echo ""
 	read -p "Continuar com a instalação? [s/n]: " -e -i n resposta
 	if [[ "$resposta" = 's' ]]; then
@@ -43,6 +47,7 @@ net.ipv4.tcp_rmem = 4096 87380 16777216
 net.ipv4.tcp_wmem = 4096 16384 16777216
 net.ipv4.tcp_low_latency = 1
 net.ipv4.tcp_slow_start_after_idle = 0" >> /etc/sysctl.conf
+sleep 2
 echo ""
 sysctl -p /etc/sysctl.conf
 		echo ""
